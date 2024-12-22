@@ -8,18 +8,18 @@ export function WalletConnection() {
   const [address, setAddress] = useState('')
 
   const connectWallet = async () => {
-    if (typeof window.ethereum !== 'undefined') {
-      try {
-        await window.ethereum.request({ method: 'eth_requestAccounts' })
-        const accounts = await window.ethereum.request({ method: 'eth_accounts' })
-        setAddress(accounts[0])
-        setIsConnected(true)
-      } catch (error) {
-        console.error('Failed to connect wallet:', error)
-      }
-    } else {
-      alert('Please install MetaMask!')
-    }
+    // if (typeof window.ethereum !== 'undefined') {
+    //   try {
+    //     await window.ethereum.request({ method: 'eth_requestAccounts' })
+    //     const accounts = await window.ethereum.request({ method: 'eth_accounts' })
+    //     setAddress(accounts[0])
+    //     setIsConnected(true)
+    //   } catch (error) {
+    //     console.error('Failed to connect wallet:', error)
+    //   }
+    // } else {
+    //   alert('Please install MetaMask!')
+    // }
   }
 
   return (
